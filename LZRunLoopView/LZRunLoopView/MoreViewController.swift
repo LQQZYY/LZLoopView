@@ -66,6 +66,11 @@ class MoreViewController: UIViewController {
         run2.dataSource = arr
         run2.addSubTitles(run.titles!, isHasBackground: true)
         self.view.addSubview(run2)
+        
+        
+        LZLoopView.addTimer(run)
+        LZLoopView.addTimer(run1)
+        LZLoopView.addTimer(run2)
     }
 
     func btnClick() {

@@ -16,6 +16,8 @@ class LZLoopView: UIView, UIScrollViewDelegate {
     var isAuto: Bool = true
     // 占位图
     var placeholderImage: UIImage? = UIImage()
+    // 是否自动添加timer, 最后统一释放,与扩展方法结合使用
+    var isNeedInvalidTimerLast: Bool = false
     
     var ishasTitleBackground: Bool = false
     var titles: [String]? {
@@ -87,8 +89,22 @@ class LZLoopView: UIView, UIScrollViewDelegate {
         print("*******************************")
     }
     
-    
     // 类方法创建
+    static func loopView(withFrame frame: CGRect, dataSource data: [Any], interval: TimeInterval) -> LZLoopView {
+        
+        let loop = LZLoopView(frame: frame)
+        loop.interval = interval
+        
+        if let arr = loop.dataSource {
+            if arr.count > 0 {
+                
+                loop.dataSource?.removeAll()
+            }
+        }
+        loop.dataSource = data
+        
+        return loop
+    }
     static func loopView(withFrame frame: CGRect, dataSource data: [Any], interval: TimeInterval, didSelected: @escaping callBack) -> LZLoopView {
         
         let loop = LZLoopView(frame: frame)
@@ -192,9 +208,12 @@ class LZLoopView: UIView, UIScrollViewDelegate {
             
             self.timer = Timer.scheduledTimer(timeInterval: (self.interval), target: self, selector: #selector(autoRun), userInfo: nil, repeats: true)
             
-//            RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
+            RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
             
-            LZLoopView.addTimer(self)
+            if self.isNeedInvalidTimerLast {
+                
+                LZLoopView.addTimer(self)
+            }
         }
     }
     
@@ -418,16 +437,18 @@ class LZLoopView: UIView, UIScrollViewDelegate {
 // 手动销毁所有定时器,避免循环引用内存泄露
 // 建议在页面有多个LZRunLoopView的情况下使用,例如在UITableViewCell中使用时
 // 单个视图可调用stopAutoRun来销毁
-var __timers: [Timer?] = []
+var __timers: [LZLoopView?] = []
 extension LZLoopView {
     
     static func invalidateAllTimer () {
         
-        for timer in __timers {
+        for loop in __timers {
             
-            if timer != nil {
-                
-                timer?.invalidate()
+            if let loop = loop {
+                if let timer = loop.timer {
+                    
+                    timer.invalidate()
+                }
             }
         }
         
@@ -436,6 +457,6 @@ extension LZLoopView {
     
     static func addTimer (_ timer: LZLoopView) {
         
-        __timers.append(timer.timer)
+        __timers.append(timer)
     }
 }
