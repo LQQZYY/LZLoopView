@@ -95,4 +95,5 @@ static func addTimer (_ loop: LZLoopView)
 <br/>
 ![](https://github.com/LQQZYY/LZLoopView/blob/master/创建文件1.gif)
 
+示例图中控制台打印的deinit字段,就表示成功释放掉了内存
 #(完)
