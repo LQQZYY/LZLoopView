@@ -9,6 +9,8 @@
 在使用其他的轮播图时,关于定时器的释放都有问题,在轮播图页面消失后,定时器并没有被销毁,当前视图并没有被释放,造成内存泄露,这里提供了相关的解决方法
 <br>
 关于造成内存泄露的原因: 有一个说法是当Timer对象添加到RunLoop时,会被RunLoop强引用,同时Timer的对象会对其target对象强引用,从而形成循环引用
+
+
 #相关属性
 ```Swift
 // 轮播间隔.默认4s
@@ -90,3 +92,7 @@ static func addTimer (_ loop: LZLoopView)
 在创建LZLoopView实例的时候,调用addTimer添加,在需要释放定时器的时候调用invalidateAllTimer即可!!
 也可以将LZLoopView实例对象的属性isNeedInvalidTimerLast打开,这样就会自动调用addTimer,但是释放的时候,一定要手动调用invalidateAllTimer
 #效果图
+<br/>
+![](https://github.com/LQQZYY/LZLoopView/blob/master/创建文件1.gif)
+
+#(完)
