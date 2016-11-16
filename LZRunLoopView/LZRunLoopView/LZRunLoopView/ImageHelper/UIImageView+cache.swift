@@ -36,6 +36,7 @@ extension UIImageView {
         return StaticSharedCache.shared!
     }
     
+    
     func imageFromURL(_ url: String, placeholder: UIImage, fadeIn: Bool = true, shouldCacheImage: Bool = true, closure: ((_ image: UIImage?) -> ())? = nil)
     {
         self.image = self.image(fromURL: url, placeholder: placeholder, shouldCacheImage: shouldCacheImage) {

@@ -14,6 +14,8 @@ class LZLoopView: UIView, UIScrollViewDelegate {
     var interval: TimeInterval = 3.0
     var dataSource: [Any]?
     var isAuto: Bool = true
+    // 占位图
+    var placeholderImage: UIImage? = UIImage()
     
     var ishasTitleBackground: Bool = false
     var titles: [String]? {
@@ -252,13 +254,31 @@ class LZLoopView: UIView, UIScrollViewDelegate {
         let middleImg = self.images[1] as UIImageView
         let rightImg = self.images.last! as UIImageView
         
-        leftImg.cancelCurrentRequest()
-        middleImg.cancelCurrentRequest()
-        rightImg.cancelCurrentRequest()
+        self.setImageFor(imageView: leftImg, left)
+        self.setImageFor(imageView: middleImg, middle)
+        self.setImageFor(imageView: rightImg, right)
         
-        leftImg.imageFromURL(left as! String, placeholder: UIImage())
-        middleImg.imageFromURL(middle as! String, placeholder: UIImage())
-        rightImg.imageFromURL(right as! String, placeholder: UIImage())
+    }
+    
+    private func setImageFor(imageView: UIImageView, _ obj: Any) {
+        
+        if obj is String {
+            let string = obj as! String
+            if  string.hasPrefix("http") {
+                
+                imageView.cancelCurrentRequest()
+                
+                imageView.imageFromURL(string, placeholder: self.placeholderImage!)
+            } else {
+                
+                imageView.image = UIImage(named: string)
+            }
+        } else if obj is UIImage {
+            
+            let img = obj as! UIImage
+            
+            imageView.image = img
+        }
     }
     
     override func layoutSubviews() {
