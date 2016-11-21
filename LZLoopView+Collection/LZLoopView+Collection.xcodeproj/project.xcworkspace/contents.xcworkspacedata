@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LZRunLoopView.xcodeproj">
+      location = "self:LZLoopView+Collection.xcodeproj">
    </FileRef>
 </Workspace>

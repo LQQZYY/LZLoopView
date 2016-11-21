@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  LZRunLoopView
+//  LZLoopView+Collection
 //
-//  Created by Artron_LQQ on 2016/11/14.
+//  Created by Artron_LQQ on 2016/11/17.
 //  Copyright © 2016年 Artup. All rights reserved.
 //
 
@@ -20,21 +20,8 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.red
         button.addTarget(self, action: #selector(btnClick), for: .touchUpInside)
         self.view.addSubview(button)
-        
-        
-        let button1 = UIButton(type: .custom)
-        button1.frame = CGRect(x: 100, y: 200, width: 200, height: 40)
-        button1.setTitle("多个loopView", for: .normal)
-        button1.backgroundColor = UIColor.red
-        button1.addTarget(self, action: #selector(moreBtnClick), for: .touchUpInside)
-        self.view.addSubview(button1)
     }
 
-    func moreBtnClick() {
-        let more = MoreViewController()
-        
-        self.present(more, animated: true, completion: nil)
-    }
     func btnClick() {
         
         let test = TestViewController()

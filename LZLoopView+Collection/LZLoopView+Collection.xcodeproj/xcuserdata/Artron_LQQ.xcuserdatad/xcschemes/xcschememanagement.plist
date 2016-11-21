@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LZRunLoopView.xcscheme</key>
+		<key>LZLoopView+Collection.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>91AA4E151DD9AB55007803B1</key>
+		<key>91E6D7131DDDAC6500685864</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91AA4E291DD9AB55007803B1</key>
+		<key>91E6D7271DDDAC6500685864</key>
 		<dict>
 			<key>primary</key>
 			<true/>

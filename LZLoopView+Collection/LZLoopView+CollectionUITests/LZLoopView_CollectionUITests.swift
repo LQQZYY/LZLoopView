@@ -1,14 +1,14 @@
 //
-//  LZRunLoopViewUITests.swift
-//  LZRunLoopViewUITests
+//  LZLoopView_CollectionUITests.swift
+//  LZLoopView+CollectionUITests
 //
-//  Created by Artron_LQQ on 2016/11/14.
+//  Created by Artron_LQQ on 2016/11/17.
 //  Copyright © 2016年 Artup. All rights reserved.
 //
 
 import XCTest
 
-class LZRunLoopViewUITests: XCTestCase {
+class LZLoopView_CollectionUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

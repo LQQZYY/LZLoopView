@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91AA4E151DD9AB55007803B1"
-               BuildableName = "LZRunLoopView.app"
-               BlueprintName = "LZRunLoopView"
-               ReferencedContainer = "container:LZRunLoopView.xcodeproj">
+               BlueprintIdentifier = "91E6D7131DDDAC6500685864"
+               BuildableName = "LZLoopView+Collection.app"
+               BlueprintName = "LZLoopView+Collection"
+               ReferencedContainer = "container:LZLoopView+Collection.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,27 +32,27 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91AA4E291DD9AB55007803B1"
-               BuildableName = "LZRunLoopViewUITests.xctest"
-               BlueprintName = "LZRunLoopViewUITests"
-               ReferencedContainer = "container:LZRunLoopView.xcodeproj">
+               BlueprintIdentifier = "91E6D7271DDDAC6500685864"
+               BuildableName = "LZLoopView+CollectionUITests.xctest"
+               BlueprintName = "LZLoopView+CollectionUITests"
+               ReferencedContainer = "container:LZLoopView+Collection.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91AA4E151DD9AB55007803B1"
-            BuildableName = "LZRunLoopView.app"
-            BlueprintName = "LZRunLoopView"
-            ReferencedContainer = "container:LZRunLoopView.xcodeproj">
+            BlueprintIdentifier = "91E6D7131DDDAC6500685864"
+            BuildableName = "LZLoopView+Collection.app"
+            BlueprintName = "LZLoopView+Collection"
+            ReferencedContainer = "container:LZLoopView+Collection.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -65,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91AA4E151DD9AB55007803B1"
-            BuildableName = "LZRunLoopView.app"
-            BlueprintName = "LZRunLoopView"
-            ReferencedContainer = "container:LZRunLoopView.xcodeproj">
+            BlueprintIdentifier = "91E6D7131DDDAC6500685864"
+            BuildableName = "LZLoopView+Collection.app"
+            BlueprintName = "LZLoopView+Collection"
+            ReferencedContainer = "container:LZLoopView+Collection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91AA4E151DD9AB55007803B1"
-            BuildableName = "LZRunLoopView.app"
-            BlueprintName = "LZRunLoopView"
-            ReferencedContainer = "container:LZRunLoopView.xcodeproj">
+            BlueprintIdentifier = "91E6D7131DDDAC6500685864"
+            BuildableName = "LZLoopView+Collection.app"
+            BlueprintName = "LZLoopView+Collection"
+            ReferencedContainer = "container:LZLoopView+Collection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
