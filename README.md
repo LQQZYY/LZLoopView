@@ -81,16 +81,7 @@ func startAutoRun()
 ```swift
 func stopAutoRun()
 ```
-#####需要注意的是: 在创建LZLoopView的控制器内,当使用结束l后,一定要调用这个方法来释放定时器,否则会引起内存泄露
-当一个页面上添加了多个LZLoopView时,例如在tableViewCell中添加,这样再一个个调用这个方法来释放定时器,太麻烦,所以,这里我写了一个扩展,增加了两个方法:
-```Swift
-// 释放所有的定时器
-static func invalidateAllTimer ()
-// 添加定时器,参数只需将LZLoopView实例对象传过去即可
-static func addTimer (_ loop: LZLoopView)
-```
-在创建LZLoopView实例的时候,调用addTimer添加,在需要释放定时器的时候调用invalidateAllTimer即可!!
-也可以将LZLoopView实例对象的属性isNeedInvalidTimerLast打开,这样就会自动调用addTimer,但是释放的时候,一定要手动调用invalidateAllTimer
+为避免内存泄露,这里对定时器做了一些处理,具体内容见LZTimer类,在使用时,不用关心定时器是否被释放,我已经在此类进行了处理,不会造成内存泄露
 #效果图
 <br/>
 ![](https://github.com/LQQZYY/LZLoopView/blob/master/创建文件1.gif)
