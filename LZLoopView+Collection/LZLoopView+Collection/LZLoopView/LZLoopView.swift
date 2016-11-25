@@ -156,6 +156,8 @@ class LZLoopView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
             
             
             self.timer = LZTimer.scheduledTimer(timeInterval: self.timeInterval, target: self, selector: #selector(autoRun), userInfo: nil, repeats: true)
+            
+            RunLoop.current.add(self.timer!, forMode: RunLoopMode.commonModes)
         }
     }
     
