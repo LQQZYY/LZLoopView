@@ -85,7 +85,8 @@ func stopAutoRun()
 为避免内存泄露,这里对定时器做了一些处理,具体内容见LZTimer类,在使用时,不用关心定时器是否被释放,我已经在此类进行了处理,不会造成内存泄露
 # 效果图
 <br/>
-![](https://github.com/LQQZYY/LZLoopView/blob/master/创建文件1.gif)
+
+ ![](https://github.com/LQQZYY/LZLoopView/blob/master/创建文件1.gif) 
 
 示例图中控制台打印的deinit字段,就表示成功释放掉了内存
 # (完)
