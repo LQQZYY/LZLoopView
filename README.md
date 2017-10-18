@@ -1,5 +1,8 @@
 
 # LZLoopView
+
+##### Objective-C版本: [LDLoopView-OC](https://github.com/LQi2009/LDLoopView-OC)
+
 基于swift3.0的轮播图
 
 图片轮播在很多情况下都会用到,其他也有许多d类似的demo,但或多或少不能满足自己的需求,这是一个基于Swift 3.0编写的轮播图,可以自动加载URL中图片并缓存
